@@ -7,4 +7,4 @@ else
 fi
 
 echo "Entorno php"
-docker compose -f ~/development/docker/php-docker-stack/docker-compose.yml $1
+docker compose -f ~/development/docker/php-docker-stack/docker-compose.yml "$@"
