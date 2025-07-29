@@ -22,4 +22,4 @@
 #   - Si el comando tiene espacios o múltiples argumentos, se debe pasar entre comillas.
 # ---------------------------------------------------
 
-docker exec -it $1 $2
+docker exec -it "$@"
