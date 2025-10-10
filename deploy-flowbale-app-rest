@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Deploy flowable-app-rest"
+cd ~/development/flowable-engine/modules/flowable-app-rest
+
+mvn clean install -DskipTests && \
+
+sudo chown tomcat:tomcat target/flowable-rest.war && \
+
+# sudo cp target/flowable-rest.war /opt/tomcat/apache-tomcat-9.0.85/webapps/ && \
+sudo cp target/flowable-rest.war /opt/apache-tomcat-10.1.17/webapps-javaee
+
+

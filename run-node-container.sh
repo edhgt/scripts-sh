@@ -1,6 +1,8 @@
 docker run -it \
   --name ionic \
-  -v "$PWD":/app \
+  --memory="4g" \
+  --cpus="2" \
+  -v ~/development/javascript:/app \
   -w /app \
   -p 5173:5173 \
   -p 8100:8100 \

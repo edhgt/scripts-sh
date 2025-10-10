@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Deploy flowable-app-rest"
+cd ~/development/flowable-engine/modules/flowable-ui/flowable-ui-app
+
+mvn clean install package -DskipTests && \
+
+echo "Cambiando permisos a flowable-ui.war" && \
+sudo chown tomcat:tomcat target/flowable-ui.war && \
+
+echo "Copiando flowable-ui.war" && \
+# sudo cp target/flowable-ui.war /opt/tomcat/apache-tomcat-9.0.85/webapps/ && \
+sudo cp target/flowable-ui.war /opt/apache-tomcat-10.1.17/webapps-javaee
